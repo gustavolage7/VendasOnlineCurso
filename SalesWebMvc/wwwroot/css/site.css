@@ -35,3 +35,66 @@ body {
         display: none;
     }
 }
+
+#btn_info {
+    width: 100px;
+    height: 30px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+
+    #btn_info:hover {
+        width: 100px;
+        height: 30px;
+        background-color: lightblue;
+        color: black;
+        font-weight: bold;
+        -webkit-transition: background-color 1s, color 1s;
+        -moz-transition: background-color 1s, color 1s;
+        -ms-transition: background-color 1s, color 1s;
+        -o-transition: background-color 1s, color 1s;
+        transition: background-color 1s, color 1s;
+    }
+
+#btn_danger {
+    width: 100px;
+    height: 30px;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+}
+
+    #btn_danger:hover {
+        width: 100px;
+        height: 30px;
+        background-color: lightcoral;
+        color: black;
+        font-weight: bold;
+        -webkit-transition: background-color 1s, color 1s;
+        -moz-transition: background-color 1s, color 1s;
+        -ms-transition: background-color 1s, color 1s;
+        -o-transition: background-color 1s, color 1s;
+        transition: background-color 1s, color 1s;
+    }
+
+#btn_success {
+    width: 100px;
+    height: 30px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+}
+
+    #btn_success:hover {
+        width: 100px;
+        height: 30px;
+        background-color: lightgreen;
+        color: black;
+        font-weight: bold;
+        -webkit-transition: background-color 1s, color 1s;
+        -moz-transition: background-color 1s, color 1s;
+        -ms-transition: background-color 1s, color 1s;
+        -o-transition: background-color 1s, color 1s;
+        transition: background-color 1s, color 1s;
+    }
