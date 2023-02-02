@@ -98,3 +98,16 @@ body {
         -o-transition: background-color 1s, color 1s;
         transition: background-color 1s, color 1s;
     }
+
+table, thead {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+tr:hover{
+    background-color: lightgray;
+}
