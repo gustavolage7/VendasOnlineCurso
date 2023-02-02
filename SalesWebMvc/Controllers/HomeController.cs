@@ -31,6 +31,9 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Privacy()
         {
+
+            ViewData["Message"] = "Use this page to detail your site's privacy policy.";
+
             return View();
         }
 
