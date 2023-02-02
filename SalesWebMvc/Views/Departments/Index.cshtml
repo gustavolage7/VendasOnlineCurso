@@ -10,32 +10,46 @@ using System;
     ViewData["Title"] = "Index";
 }
 
-< h2 > Index </ h2 >
+<h1>@ViewData["Title"]</h1>
 
-< p >
-    < a asp - action = "Create" > Create New </ a >
-</ p >
-< table class= "table" >
-    < thead >
-        < tr >
-            < th >
+<p style="text-align: right;">
+    <a id="btn_success" class="btn" asp-action="Create">+</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 20%;">
+                #
+            </th>
+            <th style="width: 30%;">
                 @Html.DisplayNameFor(model => model.Name)
-            </ th >
-            < th ></ th >
-        </ tr >
-    </ thead >
-    < tbody >
-@foreach(var item in Model) {
-        < tr >
-            < td >
-    @Html.DisplayFor(modelItem => item.Name)
-            </ td >
-            < td >
-                < a asp - action = "Edit" asp - route - id = "@item.Id" > Edit </ a > |
-                < a asp - action = "Details" asp - route - id = "@item.Id" > Details </ a > |
-                < a asp - action = "Delete" asp - route - id = "@item.Id" > Delete </ a >
-            </ td >
-        </ tr >
-}
-    </ tbody >
-</ table >
+            </th>
+            <th style="width: 50%;">
+                Ações
+            </th>
+        </tr>
+    </thead>
+    @{
+        int count = 1;
+    }
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @count
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a id="btn_info" class="btn" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a id="btn_info" class="btn" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a id="btn_danger" class="btn" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>
